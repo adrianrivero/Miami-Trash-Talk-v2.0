@@ -1,0 +1,132 @@
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Miami Trash Talk</title>
+
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script>
+
+$(document).ready(function() {
+
+	$('a.panel').click(function () {
+
+		$('a.panel').removeClass('selected');
+		$(this).addClass('selected');
+		
+		current = $(this);
+				
+		$('#wrapper').scrollTo($(this).attr('href'), 800);		
+		
+		return false;
+	});
+	
+	$(window).resize(function () {
+		resizePanel();
+	});
+	
+});
+
+function resizePanel() {
+
+	width = $(window).width();
+	height = $(window).height();
+
+	mask_height = height * $('.item').length;
+		
+	$('#debug').html(width  + ' ' + height + ' ' + mask_height);
+	
+	$('#wrapper, .item').css({width: width, height: height});
+	$('#mask').css({width: width, height: mask_height});
+	$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+		
+}
+
+</script>
+
+
+</head>
+<body>
+
+
+<div id="wrapper">
+
+	<div id="mask">
+
+		<div id="item1" class="item">
+			
+			<div class="content"><div class="hide_me">Miami Heat<a href="#item1" class="panel">Miami Heat</a> | <a href="#item2" class="panel">Miami Marlins</a> | <a href="#item3" class="panel">Home</a> | <a href="#item4" class="panel">Miami Dolphins</a> | <a href="#item5" class="panel">Miami Hurricanes</a></div>
+			<ul class="page_nav">
+				<li><a href="#item1" class="current_page" class="panel"><img class="team_logo" src="images/heat_logo.png"></a></li>
+				<li><a href="#item2" class="panel"><img class="team_logo" src="images/marlins_logo.png"></a></li>
+				<li><a href="#item3" class="panel"><img class="main_logo" src="images/main_logo.png"></a></li>
+				<li><a href="#item4" class="panel"><img class="team_logo" src="images/dolphins_logo.png"></a></li>
+				<li><a href="#item5" class="panel"><img class="team_logo" src="images/hurricanes_logo.png"></a></li>
+			</ul>
+			</div>
+		</div>
+		
+		<div id="item2" class="item">
+			<a name="item2"></a>
+			
+			<div class="content"><div class="hide_me">Miami Marlins<a href="#item1" class="panel">Miami Heat</a> | <a href="#item2" class="panel">Miami Marlins</a> | <a href="#item3" class="panel">Home</a> | <a href="#item4" class="panel">Miami Dolphins</a> | <a href="#item5" class="panel">Miami Hurricanes</a></div>
+			<ul class="page_nav">
+				<li><a href="#item1" class="panel"><img class="team_logo" src="images/heat_logo.png"></a></li>
+				<li><a href="#item2" class="current_page" class="panel"><img class="team_logo" src="images/marlins_logo.png"></a></li>
+				<li><a href="#item3" class="panel"><img class="main_logo" src="images/main_logo.png"></a></li>
+				<li><a href="#item4" class="panel"><img class="team_logo" src="images/dolphins_logo.png"></a></li>
+				<li><a href="#item5" class="panel"><img class="team_logo" src="images/hurricanes_logo.png"></a></li>
+			</ul>
+			</div>
+			
+		</div>
+		
+		<div id="item3" class="item">
+			<a name="item3"></a>
+
+			<div class="content"><div class="hide_me">Home<a href="#item1" class="panel">Miami Heat</a> | <a href="#item2" class="panel">Miami Marlins</a> | <a href="#item3" class="panel">Home</a> | <a href="#item4" class="panel">Miami Dolphins</a> | <a href="#item5" class="panel">Miami Hurricanes</a></div>
+			<ul class="page_nav">
+				<li><a href="#item1" class="panel"><img class="team_logo" src="images/heat_logo.png"></a></li>
+				<li><a href="#item2" class="panel"><img class="team_logo" src="images/marlins_logo.png"></a></li>
+				<li><a href="#item3" class="current_page" class="panel"><img class="main_logo" src="images/main_logo.png"></a></li>
+				<li><a href="#item4" class="panel"><img class="team_logo" src="images/dolphins_logo.png"></a></li>
+				<li><a href="#item5" class="panel"><img class="team_logo" src="images/hurricanes_logo.png"></a></li>
+			</ul>
+		</div>
+		</div>
+		
+		<div id="item4" class="item">
+			<a name="item4"></a>
+			<div class="content"><div class="hide_me">Miami Dolphins<a href="#item1" class="panel">Miami Heat</a> | <a href="#item2" class="panel">Miami Marlins</a> | <a href="#item3" class="panel">Home</a> | <a href="#item4" class="panel">Miami Dolphins</a> | <a href="#item5" class="panel">Miami Hurricanes</a></div>
+			<ul class="page_nav">
+				<li><a href="#item1" class="panel"><img class="team_logo" src="images/heat_logo.png"></a></li>
+				<li><a href="#item2" class="panel"><img class="team_logo" src="images/marlins_logo.png"></a></li>
+				<li><a href="#item3" class="panel"><img class="main_logo" src="images/main_logo.png"></a></li>
+				<li><a href="#item4" class="current_page" class="panel"><img class="team_logo" src="images/dolphins_logo.png"></a></li>
+				<li><a href="#item5" class="panel"><img class="team_logo" src="images/hurricanes_logo.png"></a></li>
+			</ul>
+		</div>
+		</div>
+		
+		<div id="item5" class="item">
+			<a name="item5"></a>
+			<div class="content"><div class="hide_me">Miami Hurricanes<a href="#item1" class="panel">Miami Heat</a> | <a href="#item2" class="panel">Miami Marlins</a> | <a href="#item3" class="panel">Home</a> | <a href="#item4" class="panel">Miami Dolphins</a> | <a href="#item5" class="panel">Miami Hurricanes</a></div>
+			<ul class="page_nav">
+				<li><a href="#item1" class="panel"><img class="team_logo" src="images/heat_logo.png"></a></li>
+				<li><a href="#item2" class="panel"><img class="team_logo" src="images/marlins_logo.png"></a></li>
+				<li><a href="#item3" class="panel"><img class="main_logo" src="images/main_logo.png"></a></li>
+				<li><a href="#item4" class="panel"><img class="team_logo" src="images/dolphins_logo.png"></a></li>
+				<li><a href="#item5" class="current_page" class="panel"><img class="team_logo" src="images/hurricanes_logo.png"></a></li>
+			</ul>
+		</div>
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>
