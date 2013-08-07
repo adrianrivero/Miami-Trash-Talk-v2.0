@@ -15,6 +15,30 @@ body {
 	overflow:hidden;
 }
 
+#slider-1-wrapper{
+	margin-top: 10%;
+	margin-left: 40%
+}
+
+#slider-2-wrapper{
+	margin-top: 10%;
+	margin-left: 40%
+}
+
+#slider-3-wrapper{
+	margin-top: 10%;
+	margin-left: 40%
+}
+
+#slider-4-wrapper{
+	margin-top: 10%;
+	margin-left: 40%
+}
+
+#slider-5-wrapper{
+	margin-top: 10%;
+	margin-left: 40%
+}
 
 	#mask {
 		width:100%;
@@ -136,6 +160,10 @@ body {
 		background-color: black;
 		background-size: 100%;
 	}
+
+	.clear{
+	clear: both;
+}
 
 
 
