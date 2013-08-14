@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Titillium+Web:400,300,600,700);
+
+
 /***********************************************************************
 *
 *  Liquid Slider
@@ -17,7 +20,7 @@
 *******************************************************/
 .no-js .liquid-slider {
   height:350px;
-  overflow:scroll;
+
 }
 
 /******************************************************
@@ -67,12 +70,18 @@
 * max width instead
 *******************************************************/
 .ls-wrapper .liquid-slider {
-  background: rgba(205,201,201,0.9);
-  width: 1030px;
+  background: rgba(139,137,137,0.8);
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid black;
+  font-family: 'Oswald', sans-serif;
   /* Do not edit below this line */
   float: left;
   overflow: hidden;
   position: relative;
+}
+.ls-wrapper .liquid-slider h2{
+  font-weight: bolder;
 }
 .ls-wrapper .panel-container {
   /* Do not edit below this line */
@@ -94,8 +103,12 @@
 * for the entire slider.
 *******************************************************/
 .ls-wrapper .liquid-slider .panel {  
-  width: 1030px;
-  height: 400px;
+  max-width: 700px;
+  width: 100%;
+  
+  margin-bottom:0%;
+  overflow-y:scroll;
+
   /* Do not edit below this line */
   display: block;
   float: left;
@@ -147,8 +160,8 @@
 * .currentCrossLink refers to external crosslinking.
 *******************************************************/
 .ls-wrapper .ls-nav a {
-  background: #d8d8d8;
-  color: #333333;
+  background: #000000;
+  color: white;
   margin-right: 1px;
   padding: 3px 6px;  
 }
@@ -158,13 +171,17 @@
   text-shadow: none;
 }
 .ls-wrapper .ls-nav .current {
-  background: #f2f2f2;
+  background: #ffffff;
+  color: black;
 }
 .currentCrossLink {
   font-weight: bold;
 }
 .ls-wrapper .ls-nav ul {  
   padding:0;
+font-family: 'Titillium Web', sans-serif;
+font-weight: bold;
+font-size: 20px;
   /* Do not edit below this line */
   clear: both;
   display: block;
@@ -207,7 +224,7 @@
   width:100%
   And delete the rest of the styling here */
 
-  width: 150%;
+  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance:none;
@@ -300,8 +317,8 @@
 *******************************************************/
 .ls-responsive .liquid-slider {
   /* Do not edit below this line */
-  width: 800px;
-  margin: 0;
+  width: 100%;
+  margin: 0 ;
 }
 .ls-responsive .liquid-slider .panel .panel-wrapper {
   padding: 10px;
@@ -378,8 +395,12 @@
     width:24%;
     */
   }
+
+
   .ls-responsive .liquid-slider .panel .panel-wrapper {
-    padding: 20px 35px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
